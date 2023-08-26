@@ -103,6 +103,28 @@
   filter: blur(45px);
   transform: translateZ(0);
 }
+.linerTopLeft {
+  position: absolute;
+  padding: 4rem 0;
+  height: 1000px;
+  width: 1000px;
+  transform: translate(-75%, -75%);
+}
+.linerTopLeft::before {
+  background: linear-gradient(206deg, #FF4D00 6.77%, #F57E03 56.25%, #F0D20C 100%);
+  border-radius: 50%;
+  width: 1000px;
+  height: 1000px;
+  z-index: -1;
+  left: 0px;
+}
+.linerTopLeft::before {
+  content: '';
+  position: relative;
+  display: inline-block;
+  filter: blur(45px);
+  transform: translateZ(0);
+}
 
 .logo {
   position: relative;
