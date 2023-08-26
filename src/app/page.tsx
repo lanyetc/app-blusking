@@ -27,7 +27,7 @@ export default function Home() {
           </a>
         </div>
       </div>
-
+      <div className={styles.linerTopLeft}></div>
       <div className={styles.center}>
         <Image
           className={styles.logo}
