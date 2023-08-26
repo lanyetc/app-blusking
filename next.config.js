@@ -14,15 +14,11 @@ if (isGithubActions) {
     loaderFile: './image-loader.js',
   }
 }
-console.log('config', images)
 const nextConfig = {
   assetPrefix: assetPrefix,
   basePath: basePath,
   output: "export",
-  images: {
-    loader: 'custom',
-    loaderFile: './image-loader.js',
-  },
+  images: images,
 }
 
 module.exports = nextConfig
