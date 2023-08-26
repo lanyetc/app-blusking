@@ -19,7 +19,10 @@ const nextConfig = {
   assetPrefix: assetPrefix,
   basePath: basePath,
   output: "export",
-  images: images,
+  images: {
+    loader: 'custom',
+    loaderFile: './image-loader.js',
+  },
 }
 
 module.exports = nextConfig
