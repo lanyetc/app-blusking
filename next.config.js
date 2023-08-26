@@ -14,7 +14,7 @@ const nextConfig = {
   basePath: basePath,
   output: "export",
   images: {
-    loader: 'mimgix',
+    loader: 'imgix',
     path: 'https://lanyetc.imgix.net',
   },
 }
