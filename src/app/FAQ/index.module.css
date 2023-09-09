@@ -1,0 +1,22 @@
+.FAQPage {
+  display: flex;
+  justify-content: center;
+  min-height: calc(100vh - 70px);
+  align-items: center;
+}
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+}
+
+.faqBlock {
+  background-image: url('/FAQ-1.png');
+  background-repeat: no-repeat;
+  padding-block: 102px;
+  border-radius: 16px;
+  text-align: center;
+  font-family: Eczar;
+  font-size: 100px;
+  font-weight: 700;
+}

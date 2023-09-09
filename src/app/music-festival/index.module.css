@@ -1,0 +1,77 @@
+.musicFestivalPage {
+  height: 100vh;
+}
+
+.leftContainer {
+  position: relative;
+  padding: 70px;
+}
+
+.leftContainer .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.leftContainer .title {
+  display: flex;
+  flex-direction: column;
+  font-family: Eczar;
+  font-size: 70px;
+  font-weight: 700;
+  width: 330px;
+  text-align: right;
+  padding-top: 74px;
+  padding-bottom: 110px;
+}
+
+.leftContainer .detail {
+  font-size: 13px;
+  width: 70%;
+}
+
+.leftContainer>img {
+  position: absolute;
+  right: 0;
+  transform: translateX(75%) scale(75%);
+}
+
+.rightContainer {
+  background-color: #F1EFDB;
+  position: relative;
+}
+
+.rightContainer>img {
+  position: absolute;
+  right: 50px;
+  z-index: 0;
+}
+
+.rightContainer .detail {
+  position: absolute;
+  width: 318px;
+  border-radius: 8px;
+  background: #8F99BC;
+  right: 90px;
+  padding: 8px 20px;
+  color: #000000;
+  top: 10%;
+  font-size: 17px;
+}
+
+.rightContainer .upload {
+  position: absolute;
+  border-radius: 8px;
+  background: #000;
+  width: 318px;
+  right: 90px;
+  padding: 58px 60px;
+  bottom: 180px;
+  font-family: Eczar;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.rightContainer .upload .text {
+  line-height: 1.5;
+  padding-bottom: 12px;
+}

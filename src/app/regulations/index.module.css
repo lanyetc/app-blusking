@@ -1,0 +1,60 @@
+.regulationPage {
+  min-height: calc(100vh - 70px);
+  background-color: #F1EFDB;
+  color: #000;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 200px solid #000;
+}
+
+.header .name {
+  font-size: 80px;
+  font-weight: 700;
+  padding: 8px 42px;
+  border-bottom: 12px solid #000;
+  background-color: #fff;
+  color: #000;
+  font-family: Eczar;
+}
+
+.header .date {
+  color: #000;
+  font-size: 20px;
+  text-decoration-line: underline;
+  text-align: center;
+  padding-top: 24px;
+}
+
+.content {
+  max-width: 1000px;
+  margin: auto;
+  padding-bottom: 40px;
+}
+
+.articalHeader {
+  padding-top: 90px;
+}
+
+.articalHeader .title {
+  font-size: 40px;
+  font-weight: 700;
+  padding-bottom: 8px;
+  font-family: Eczar;
+}
+
+.content > img {
+  padding: 36px 0;
+}
+
+.section .subtitle {
+  padding-top: 24px;
+  font-size: 20px;
+  font-weight: 500;
+  padding-bottom: 8px;
+}
+.section .paragraph {
+  padding-bottom: 8px;
+}

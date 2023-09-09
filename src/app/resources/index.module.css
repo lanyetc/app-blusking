@@ -1,0 +1,77 @@
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F1EFDB;
+  padding-top: 90px;
+  padding-bottom: 24px;
+  color: #000;
+}
+
+
+.header h1 {
+  font-size: 100px;
+  font-weight: 700;
+  font-family: Eczar;
+  margin-bottom: 16px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.title .description {
+  padding-left: 16px;
+  border-left: 2px solid;
+  max-width: 530px;
+  margin-left: 50px;
+}
+
+.header .tags {
+  padding-inline: 90px;
+}
+
+.header .tags .searchbar {
+  display: inline-block;
+  margin-right: 32px;
+}
+
+.container {
+  padding: 72px 0;
+  background-image: url('/resources-1.png');
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+}
+
+.container .content {
+  padding-inline: 56px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.container .content .card {
+  border: none;
+  margin-bottom: 48px;
+  transition: all .5s ease-in-out;
+  cursor: pointer;
+}
+
+.cardDetail .tag {
+  color: #787878;
+  font-size: 14px;
+}
+
+.cardDetail .text {
+  padding: 16px 0;
+}
+
+.cardDetail .info {
+  display: flex;
+}
+
+.cardDetail .info .new {
+  color: #EB3D63;
+}

@@ -1,0 +1,62 @@
+.header {
+  margin: auto;
+}
+.header h1 {
+  font-size: 100px;
+  font-weight: 700;
+  font-family: Eczar;
+  margin-bottom: 16px;
+}
+
+.header .title {
+  max-width: 580px;
+  padding-top: 100px;
+  margin: auto;
+  text-align: center;
+}
+
+.header .title .description {
+  padding-left: 16px;
+  border-left: 2px solid;
+  text-align: left;
+}
+
+.celebrityContainer {
+  justify-content: space-around;
+  padding-top: 128px;
+}
+
+.celebrityContainer .card:nth-child(2n+1) {
+  padding-top: 220px;
+}
+
+
+.celebrityContainer .item {
+  height: 582px;
+  background-color: #F0D20C;
+  padding-block-start: 80px;
+  padding-block-end: 144px;
+  border-radius: 200px;
+  text-align: center;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all .5s ease;
+  cursor: pointer;
+}
+
+.celebrityContainer .item:hover {
+  box-shadow: 0px 0px 8px 4px rgba(255, 255, 255, 0.20);
+  transform: translateY(-10px);
+}
+
+.celebrityContainer .item img {
+  mix-blend-mode: luminosity;
+}
+
+.celebrityContainer .item .name {
+  font-size: 30px;
+  font-family: Eczar;
+  font-weight: 600;
+}

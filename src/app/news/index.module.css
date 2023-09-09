@@ -1,0 +1,68 @@
+.header {
+  position: relative;
+}
+
+.header>img {
+  height: auto;
+  transform: translateX(50%);
+}
+
+.header h1 {
+  font-size: 100px;
+  font-weight: 700;
+  font-family: Eczar;
+  margin-bottom: 16px;
+}
+
+.title {
+  position: absolute;
+  top: 120px;
+  transform: translateX(50%);
+  display: flex;
+}
+
+.title .description {
+  padding-left: 16px;
+  border-left: 2px solid;
+  max-width: 530px;
+  margin-top: 80px;
+  margin-left: 50px;
+}
+
+.header .tags {
+  position: absolute;
+  bottom: 130px;
+  padding-inline: 90px;
+}
+
+.container {
+  background-color: #F1EFDB;
+  border-block-start: 90px solid #000000;
+  margin-block-start: -90px;
+}
+
+.container .content {
+  padding-inline: 56px;
+  margin-top: -94px;
+}
+
+.container .content .card {
+  border: none;
+  margin-bottom: 48px;
+  background-color: transparent;
+  transition: all .5s ease-in-out ;
+}
+
+.container .content .card:hover {
+  background-color: #000000;
+}
+
+.cardMeta > div > div {
+  white-space: initial !important;
+  text-overflow: initial !important;
+  transition: all .5s ease-in-out ;
+}
+
+.card:hover .cardMeta > div > div {
+  color: #ffffff !important;
+}

@@ -1,0 +1,78 @@
+.header {
+  padding: 60px 120px;
+}
+
+.header h1 {
+  font-size: 100px;
+  font-weight: 700;
+  font-family: Eczar;
+  margin-bottom: 16px;
+}
+
+.header .description {
+  max-width: 680px;
+  padding-inline-start: 8px;
+  border-left: 2px solid;
+}
+
+.container {
+  margin-block-end: 96px;
+  align-items: flex-end;
+}
+
+.rowReverse {
+  flex-direction: row-reverse;
+}
+
+.content {
+  max-width: 410px;
+}
+
+.content .title {
+  font-size: 80px;
+  font-weight: 700;
+  font-family: Eczar;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.content.left .title {
+  margin-inline-start: 176px;
+
+}
+.content.right .title {
+  margin-inline-end: 176px;
+  justify-content: right;
+}
+.content.left .title::before,
+.content.right .title::after {
+  content: '';
+  width: 140px;
+  height: 10px;
+  display: inline-block;
+  background-color: rgb(var(--foreground-rgb));
+  position: absolute;
+  line-height: 1;
+}
+.content.left .title::before {
+  transform: translateX(-176px);
+}
+.content.right .title::after {
+  right: 0;
+  transform: translateX(176px);
+}
+
+.content {
+  padding-bottom: 24px;
+}
+.content.left .text {
+  padding-left: 68px;
+}
+.content.right .text {
+  padding-right: 68px;
+}
+
+.imageItem .tips {
+  margin-top: 6px;
+  padding-inline: 10px;
+}

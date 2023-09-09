@@ -1,8 +1,12 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Tenor_Sans, Eczar } from 'next/font/google'
+import Navbar from '../components/Navbar';
+import classnames from 'classnames';
+import { ConfigProvider } from 'antd';
 
-const inter = Inter({ subsets: ['latin'] })
+const tenorSans = Tenor_Sans({ subsets: ['latin'], weight: '400' })
+// const eczar = Eczar({ subsets: ['latin'], weight: ['500', '700'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +20,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={classnames(tenorSans.className)}>
+        <ConfigProvider theme={{
+          token: {
+            // Seed Token
+            fontFamily: 'inherit',
+            borderRadius: 2,
+            colorPrimary: '#F57E03'
+          },
+        }}>
+          <Navbar />
+          <main className='page-container'>
+            {children}
+          </main>
+        </ConfigProvider>
+      </body>
     </html>
   )
 }

@@ -38,6 +38,7 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+  --black-color: #000000;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -93,11 +94,49 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  font-family: Tenor Sans;
+}
+
+body > main.page-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 70px;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.font-ecazr {
+  font-family: Ecazr;
+}
+
+input.ant-input {
+  background: transparent;
+}
+
+.faq-collapse .ant-collapse-header {
+  border-radius: 24px !important;
+  background: #202020;
+  color: #fff !important;
+}
+
+.faq-collapse .ant-collapse-content {
+  border: none;
+  border-radius: 0 0 24px 24px;
+  background: transparent;
+  color: #fff;
+}
+
+.sendInput .ant-input-group-addon {
+  background-color: rgba(176, 174, 174, 0.74);
+  border: none;
+  border-radius: 30px !important;
+}
+
+.sendInput input.ant-input {
+  border: none;
 }
 
 @media (prefers-color-scheme: dark) {
