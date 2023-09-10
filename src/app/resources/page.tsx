@@ -8,6 +8,7 @@ import Link from "next/link";
 import { Card, Col, Input, Row, Tag } from "antd";
 import { SearchOutlined, HourglassOutlined } from "@ant-design/icons";
 import { resourceData } from "./data";
+import { useRouter } from "next/navigation";
 const { Meta } = Card;
 
 const tags = [
@@ -21,6 +22,7 @@ const tags = [
 ]
 
 const ResourcesPage: FC = () => {
+  const router = useRouter();
   return (
     <div className={classnames(styles.resourcePage)}>
       <header className={styles.header}>
@@ -49,6 +51,7 @@ const ResourcesPage: FC = () => {
             <Col key={index} span={8}>
               <Card
                 className={styles.card}
+                onClick={()=>router.push('/live-lesson')}
                 cover={<Image src={item.imgSrc} alt={item.imgSrc} width={412} height={256} />}
               >
                 <div className={styles.cardDetail}>

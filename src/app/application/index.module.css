@@ -1,0 +1,43 @@
+.innerContainer {
+  padding: 90px 50px;
+  max-width: 1400px;
+  margin: auto;
+}
+.header {
+  max-width: 560px;
+}
+
+.header h1 {
+  font-size: 100px;
+  font-weight: 700;
+  font-family: Eczar;
+  margin-bottom: 16px;
+}
+
+.header .title .description {
+  padding-left: 16px;
+  border-left: 2px solid;
+  text-align: left;
+}
+
+.container {
+  padding-top: 64px;
+}
+
+.steps {
+  border-radius: 19px;
+  background: rgba(38, 38, 38, 0.67);
+  padding: 28px 32px;
+}
+
+.info {
+  padding-top: 64px;
+  max-width: 960px;
+}
+
+.info .infoTitle {
+  font-family: Eczar;
+  font-size: 40px;
+  font-weight: 700;
+  padding-bottom: 20px;
+}

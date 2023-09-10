@@ -4,6 +4,7 @@ import Image from 'next/image'
 import styles from './page.module.css'
 import { Col, Row, Layout, Space, Input, Button } from 'antd'
 import classnames from 'classnames'
+import { useRouter } from 'next/navigation'
 
 const { Content } = Layout;
 
@@ -19,11 +20,13 @@ const CardRadiusItem = (props: any) => {
     })}
       style={style}>
       {imgSrc && <Image src={imgSrc} alt={imgSrc} width={160} height={160} priority />}
+      {label && <div className={styles.label}>{label}</div>}
     </div>
   )
 }
 
 export default function Home() {
+  const router = useRouter();
   return (
     <main className={styles.main}>
       <div className={styles.linerTopLeft}></div>
@@ -50,7 +53,7 @@ export default function Home() {
                   placeholder="search news" 
                   style={{background: 'transparent', borderRadius: '20px', color: '#ffffff', width: 256}}
                 />
-                <Button style={{ width: 80, borderRadius: '20px' }} onClick={() =>{}}>
+                <Button style={{ width: 80, borderRadius: '20px' }} onClick={() =>{router.push('/news')}}>
                   Search
                 </Button>
               </Space>
@@ -63,16 +66,23 @@ export default function Home() {
               <CardRadiusItem radius='tl' imgSrc='/home-1.png' />
             </Col>
             <Col span={8}>
-              <CardRadiusItem radius='br' style={{ background: '#F0D20C' }} />
+              <CardRadiusItem radius='br' style={{ background: '#F0D20C', color: '#FFF7BF' }} label='Interactive Map' />
             </Col>
             <Col span={8}>
-              <CardRadiusItem radius='tl' style={{ background: '#EC3D63' }} />
+              <CardRadiusItem radius='tl' style={{ background: '#EC3D63' }} label='1000+ Buskers' />
             </Col>
             <Col span={8}>
-              <CardRadiusItem radius='bl' style={{ background: '#71DED5' }} />
+              <CardRadiusItem radius='bl' style={{ background: '#71DED5', color: '#BCFBF5' }} label='Busking Application' />
             </Col>
             <Col span={8}>
-              <CardRadiusItem radius='tr' style={{ background: '#000000' }} />
+              <CardRadiusItem
+                radius='tr' 
+                style={{ background: '#000000' }} 
+                label={<div>
+                  <div className={styles.large}>45K+</div>
+                  <div>Audience</div>
+                </div>}
+              />
             </Col>
             <Col span={8}>
               <CardRadiusItem radius='bl' imgSrc='/home-2.png' />
@@ -84,16 +94,23 @@ export default function Home() {
               <CardRadiusItem radius='tl tr bl br' style={{ background: '#F1EFDB' }} />
             </Col>
             <Col span={8}>
-              <CardRadiusItem radius='tl' style={{ background: '#A5DA74' }} />
+              <CardRadiusItem radius='tl' style={{ background: '#A5DA74', color: '#D7F9B8' }} label="Learning Resources" />
             </Col>
             <Col span={8}>
-              <CardRadiusItem radius='bl' style={{ background: '#0A3796' }} />
+              <CardRadiusItem radius='bl' style={{ background: '#0A3796', color: '#5374B9' }} label="Scheduling & Booking" />
             </Col>
             <Col span={8}>
               <CardRadiusItem imgSrc='/home-4.png' />
             </Col>
             <Col span={8}>
-              <CardRadiusItem radius='tr bl' style={{ background: '#F57E03' }} />
+              <CardRadiusItem 
+                radius='tr bl' 
+                style={{ background: '#F57E03' }}
+                label={<div>
+                  <div className={styles.large}>600+</div>
+                  <div>Events</div>
+                </div>}
+              />
             </Col>
           </Row>
         </Col>

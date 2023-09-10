@@ -1,0 +1,76 @@
+.loginFormContainer {
+  color: #fff;
+  padding: 64px;
+  display: flex;
+  overflow: auto;
+}
+.LoginPage .block {
+  padding-inline: 30px;
+  border-right: 4px solid;
+  flex-shrink: 0;
+}
+
+.LoginPage .block:not(:first-child) .title {
+  font-family: Eczar;
+  font-size: 100px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.basic .title {
+  font-family: Eczar;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.basic .formContent {
+  max-width: 198px;
+  margin: auto;
+  padding-top: 104px;
+}
+
+.formContent .input {
+  color: #fff;
+}
+
+.formContent .input::placeholder {
+  color: #5B5B5B;
+}
+
+.selectItem {
+  padding-block: 8px;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.selectItem .locationIcon {
+  padding: 4px 11px 4px;
+  margin-left: 4px;
+}
+
+.submitBtn {
+  text-align: center;
+}
+
+.signUpload {
+  width: 326px;
+  display: inline-block;
+  height: 500px;
+}
+
+.dragContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dragContent .uploadBtn {
+  margin-top: 12px;
+  border-radius: 50px;
+  width: 92px;
+  padding-block: 4px;
+  color: #363636;
+  background: #fff;
+}

@@ -124,6 +124,10 @@
 .cardRadiusItem {
   width: 100%;
   height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .cardRadiusItem.radiusTL {
   border-top-left-radius: 50%;
@@ -137,6 +141,19 @@
 .cardRadiusItem.radiusBR {
   border-bottom-right-radius: 50%;
 }
+.cardRadiusItem .label {
+  font-family: Eczar;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.5;
+  padding-inline: 40px;
+}
+
+.cardRadiusItem .large {
+  font-size: 40px;
+  font-weight: 700;
+}
+
 .lineHeightZero {
   line-height: 0;
 }

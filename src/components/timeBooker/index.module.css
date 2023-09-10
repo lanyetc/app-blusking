@@ -1,0 +1,17 @@
+.timeListBox {
+  max-height: 300px;
+  overflow: auto;
+  border: 1px solid #FFF;
+}
+
+.timeListBox .item {
+  margin-block: 24px;
+  display: flex;
+  padding-inline: 64px;
+  align-items: center;
+}
+
+.timeListBox .item button.disabled {
+  color: #3A3A3A;
+  border-color: #3A3A3A;
+}

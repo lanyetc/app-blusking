@@ -5,6 +5,7 @@
   position: absolute;
   width: 100%;
   z-index: 1;
+  align-items: center;
 }
 
 .navbar.transparent {
@@ -64,4 +65,56 @@
 }
 .link:hover .underline {
   height: 4px;
+}
+
+.userLoginItem {
+  margin-left: 60px;
+}
+
+.modalBody {
+  padding-inline: 54px;
+  position: relative;
+}
+
+.modalBGImg {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+.modalTitle {
+  font-family: Eczar;
+  font-size: 48px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.selectContainer,
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 100px;
+}
+
+.loginContainer .input {
+  width: 246px;
+  color: #fff;
+  margin-bottom: 24px;
+  border-radius: 50px;
+}
+
+
+.loginContainer .input::placeholder {
+  text-align: center;
+  color: #fff;
+}
+
+.loginContainer  .loginBtn {
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.loginContainer  .signUp {
+  color: #fff;
+  cursor: pointer;
 }

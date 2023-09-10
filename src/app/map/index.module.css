@@ -1,0 +1,38 @@
+.container {
+  padding-left: 40px;
+  padding-right: 58px;
+}
+
+.inputBox {
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #FFF;
+  margin-block: 36px;
+}
+
+.inputItem {
+  padding-top: 6px;
+}
+
+.inputItem .input {
+  color: #FFF;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+.inputItem .input:focus {
+  box-shadow: none;
+}
+
+.selectItem {
+  padding-block: 8px;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.selectItem .locationIcon {
+  padding: 4px 11px 4px;
+  margin-left: 4px;
+}

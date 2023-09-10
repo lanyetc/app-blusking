@@ -6,6 +6,7 @@ import styles from './index.module.css'
 import classnames from "classnames";
 import Link from "next/link";
 import { Col, Row } from "antd";
+import { useRouter } from "next/navigation";
 
 const data = [
   {
@@ -56,6 +57,14 @@ const data = [
 ]
 
 const CelebritiesPage: FC = () => {
+  const router = useRouter()
+  const onCardClick = (index: number) => {
+    if(index === 0) {
+      router.push('/performancer?type=singer')
+    } else if(index === 4) {
+      router.push('/performancer?type=magician')
+    }
+  }
   return (
     <div className={classnames(styles.historyPage)}>
       <header className={styles.header}>
@@ -72,7 +81,7 @@ const CelebritiesPage: FC = () => {
       <Row className={styles.celebrityContainer}>
         {data.map((item, index) => (
           <Col key={index} className={styles.card}>
-            <div className={styles.item} style={{ backgroundColor: item.background }}>
+            <div className={styles.item} onClick={()=>onCardClick(index)} style={{ backgroundColor: item.background }}>
               <div className={styles.title}>
                 <div className={styles.name}>{item.name}</div>
                 <div className={styles.tag}>{item.tag}</div>

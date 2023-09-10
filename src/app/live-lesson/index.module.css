@@ -1,0 +1,92 @@
+.LivePage {
+  display: flex;
+  justify-content: center;
+  min-height: calc(100vh - 70px);
+  align-items: center;
+}
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  position: relative;
+}
+
+.imageBG {
+  position: absolute;
+  left: -100px;
+} 
+
+.leftContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.performanceType {
+  font-size: 14px;
+  padding-block-start: 14px;
+}
+
+.leftContainer .name {
+  font-family: Eczar;
+  font-size: 20px;
+  font-weight: 600;
+  padding-bottom: 16px;
+}
+
+.leftContainer .tags {
+  text-align: center;
+}
+
+.leftContainer .info {
+  padding-block: 20px;
+}
+
+.materialsBox .materialsHeader {
+  border-radius: 20px 20px 0px 0px;
+  background: #000;
+  text-align: center;
+  font-family: Eczar;
+  font-size: 24px;
+  font-weight: 600;
+  color: #E9E9E9;
+  padding-block: 12px;
+}
+
+.materialsBox .materialContent {
+  padding: 16px;
+  background: #F3F3F3;
+  color: #000;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.materialItem {
+  display: flex;
+  cursor: pointer;
+}
+
+.materialItem .text {
+  line-height: 2;
+}
+.rightText {
+  display: inline-block;
+}
+
+.rightContainer {
+  position: relative;
+}
+
+.rightContainer .liveTitle {
+  position: absolute;
+  top: 16px;
+  left: 48px;
+  font-family: Eczar;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.rightContainer .sendInput {
+  position: absolute;
+  bottom: 28px;
+  left: 48px;
+}

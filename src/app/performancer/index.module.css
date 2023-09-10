@@ -1,0 +1,57 @@
+.SingerPage {
+  display: flex;
+}
+
+.rightContainer {
+  overflow: auto;
+  padding: 36px;
+}
+
+.songsContainer {
+  display: flex;
+}
+
+.songBlock{
+  padding-right: 80px;
+}
+
+.songBlock .title {
+  display: flex;
+  padding-block: 44px;
+}
+
+.songBlock .lyrics {
+  padding-top: 48px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.videoBlock {
+  border-radius: 34px;
+  background: #F1EFDB;
+  padding: 24px;
+  color: #000;
+  margin-right: 80px;
+}
+
+.videoBlock > img {
+  border-radius: 24px;
+}
+
+.videoBlock .title {
+  padding-top: 12px;
+}
+
+.videoBlock .title .date {
+  padding-bottom: 12px;
+  font-size: 13px;
+}
+
+.videoBlock .title .text {
+  font-size: 20px;
+  padding-bottom: 8px;
+}
+
+.videoBlock .title .extra {
+  text-align: right;
+}

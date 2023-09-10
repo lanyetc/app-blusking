@@ -7,6 +7,7 @@ import classnames from "classnames";
 import Link from "next/link";
 import { Card, Col, Row, Tag } from "antd";
 import { newsData } from "./data";
+import { useRouter } from "next/navigation";
 const {Meta} = Card;
 
 const tags = [
@@ -19,6 +20,14 @@ const tags = [
 ]
 
 const NewsPage: FC = () => {
+  const router = useRouter()
+  const handleOnCardClick = (index: number) => {
+    if(index === 0) {
+      router.push('/music-festival')
+    } else if (index === 1) {
+      router.push('/regulations')
+    }
+  }
   return (
     <div className={classnames(styles.historyPage)}>
       <header className={styles.header}>
@@ -41,6 +50,7 @@ const NewsPage: FC = () => {
           {newsData.map((item, index) => (
             <Col key={index} span={8}>
               <Card
+                onClick={()=>handleOnCardClick(index)}
                 className={styles.card}
                 cover={<Image src={item.imgSrc} alt={item.imgSrc} width={412} height={256} />}
               >

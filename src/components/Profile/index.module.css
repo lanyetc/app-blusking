@@ -1,0 +1,134 @@
+.profile {
+  width: 488px;
+  padding: 44px;
+  height: 100%;
+  background: #F1EFDB;
+  text-align: center;
+  color: #000;
+}
+
+.name {
+  font-family: Eczar;
+  font-size: 38px;
+  font-weight: 600;
+  padding-block: 8px;
+  text-align: left;
+  width: 300px;
+  margin: auto;
+}
+
+.otherInfo {
+  text-align: left;
+  width: 300px;
+  margin: auto;
+  font-size: 20px;
+}
+
+.otherInfo > span {
+  margin-right: 8px;
+}
+
+.tags {
+  padding-top: 28px;
+}
+
+.block {
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-block: 20px;
+  color: #fff;
+}
+
+.block.work {
+  cursor: pointer;
+}
+
+.block .title {
+  font-family: Eczar;
+  font-size: 20px;
+  text-decoration-line: underline;
+  text-align: left;
+  opacity: .7;
+}
+
+.block .text {
+  text-shadow: 0px 4px 4px #D3BB16;
+  font-family: Eczar;
+  font-size: 60px;
+  font-weight: 700;
+  padding-block: 16px;
+}
+
+.commentModalBody {
+  position: relative;
+}
+
+.commentModalBody .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.commentModalBody .leftBlock,
+.commentModalBody .rightBlock {
+  height: 238px;
+  width: 106px;
+}
+
+.commentModalBody .leftBlock {
+  border-radius: 0px 14px 14px 0px;
+  background: #F0D20C;
+}
+
+.commentModalBody .rightBlock {
+  border-radius: 14px 0px 0px 14px;
+  background: #70CCC4;
+}
+
+.commentModalBody .centerBlock {
+  border-radius: 14px;
+  background: #F1EFDB;
+  padding: 54px 40px;
+  width: 382px;
+  font-size: 20px;
+}
+
+.commentModalBody .centerBlock .text:not(:last-child){
+  padding-bottom: 24px;
+}
+
+.commentModalBody .footer {
+  display: flex;
+  padding-inline: 160px;
+  margin-top: 68px;
+}
+
+.commentModalBody .footer .input {
+  margin-right: 24px;
+  border-radius: 20px;
+}
+
+.commentModalBody .footer button {
+  border-radius: 20px;
+}
+
+.commentModalBody .link {
+  color: #fff;
+  padding-top: 10px;
+  text-align: center;
+}
+
+
+.commentModalBody .input {
+  color: #fff;
+}
+
+.commentModalBody .input::placeholder {
+  color: #5B5B5B;
+}
+
+.commentModalBody .specialText {
+  position: absolute;
+  color: #fff;
+  transform: rotate(-6.09deg) translate(300px, -180px);
+}
