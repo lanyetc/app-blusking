@@ -243,7 +243,7 @@ const AudienceRightContent = () => {
 const MapPage: FC = () => {
   const [type, setType] = useState('')
   useEffect(()=>{
-    setType(localStorage.getItem('userInfo') || '')
+    setTimeout(()=>setType(localStorage.getItem('userInfo') || ''),10)
   },[])
 
   return (

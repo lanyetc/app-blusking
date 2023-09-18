@@ -72,21 +72,16 @@ const Navbar: FC = () => {
 	]
 	const onLogin = () => {
 		setIsLoginModalOpen(false);
+		setUserInfo(loginStatus)
 		setShouldTriggerUserInfo(true)
+		setShouldTriggerUserInfo(false)
 	}
 	useEffect(()=>{
 		setUserInfo(localStorage.getItem('userInfo') || '')
 	},[])
 	useEffect(()=>{
-		if(shouldTriggerUserInfo) {
-			localStorage.setItem('userInfo', loginStatus)
-			setUserInfo(loginStatus)
-		} else {
-			localStorage.setItem('userInfo', '')
-			setUserInfo('')
-			setLoginStatus('login')
-		}
-	}, [shouldTriggerUserInfo])
+		localStorage.setItem('userInfo', userInfo || '')
+	}, [userInfo])
 	if(userInfo !== 'busker') {
 		navs?.[2].children?.splice(1,1)
 	}
@@ -112,7 +107,12 @@ const Navbar: FC = () => {
 					<Dropdown className={style.avator} menu={
 						{items: [{
 							key: 'logout',
-							label: <span onClick={()=>setShouldTriggerUserInfo(false)}>Log out</span>
+							label: <span onClick={()=>{
+								setLoginStatus('login')
+								setUserInfo('')
+								setShouldTriggerUserInfo(true)
+								setShouldTriggerUserInfo(false)
+							}}>Log out</span>
 						}]}
 					}>
 						<Image 
