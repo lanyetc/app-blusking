@@ -241,7 +241,7 @@ const AudienceRightContent = () => {
 }
 
 const MapPage: FC = () => {
-  const type = localStorage.getItem('userInfo');
+  const type = window ? localStorage.getItem('userInfo') : false;
 
   return (
     <div className={classnames(styles.FAQPage)}>

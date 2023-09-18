@@ -41,7 +41,7 @@ const Navbar: FC = () => {
 	const [loginStatus, setLoginStatus] = useState('login')
 	const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 	const pathname = usePathname();
-	const userInfo = localStorage.getItem('userInfo');
+	const userInfo = window ? localStorage.getItem('userInfo') : false;
 	const transparentBG = Transparent_BG_Pages.includes(pathname);
 	const navs = [
 		{
@@ -71,7 +71,7 @@ const Navbar: FC = () => {
 	]
 	const onLogin = () => {
 		setIsLoginModalOpen(false);
-		localStorage.setItem('userInfo', loginStatus);
+		window && localStorage.setItem('userInfo', loginStatus);
 	}
 	return (
 		<div className={classnames(style.navbar, { [style.transparent]: transparentBG })}>
