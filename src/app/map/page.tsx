@@ -148,7 +148,7 @@ const BuskerRightContent = () => {
       </div>
       <ul className={styles.content}>
         {codeConductTexts.map((item, index) => (
-          <li>{item}</li>
+          <li key={index}>{item}</li>
         ))}
       </ul>
     </div>
@@ -242,30 +242,7 @@ const AudienceRightContent = () => {
 
 const MapPage: FC = () => {
   const type = 'busking';
-  const router = useRouter();
-  const defaultDate = dayjs(new Date());
-  const dateFormat = 'ddd, MMM DD YYYY'
 
-  const [currentDate, setCurrentDate] = useState(defaultDate)
-  const [bookOptions, setBookOptions] = useState([
-    defaultDate.subtract(1, 'day').date(),
-    defaultDate.date(),
-    defaultDate.add(1, 'day').date(),
-  ])
-
-  const onDateChange = (date: Dayjs | null) => {
-    if (date) {
-      setCurrentDate(date)
-      setBookOptions([
-        date.subtract(1, 'day').date(),
-        date.date(),
-        date.add(1, 'day').date(),
-      ])
-    }
-  }
-  const onBook = () => {
-    router.push('/application')
-  }
   return (
     <div className={classnames(styles.FAQPage)}>
       <Row gutter={90} className={styles.container}>
