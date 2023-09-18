@@ -41,8 +41,8 @@ const Navbar: FC = () => {
 	const [loginStatus, setLoginStatus] = useState('login')
 	const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 	const [shouldTriggerUserInfo, setShouldTriggerUserInfo] = useState(false)
+	const [userInfo, setUserInfo] = useState('');
 	const pathname = usePathname();
-	let userInfo;
 	const transparentBG = Transparent_BG_Pages.includes(pathname);
 	const navs = [
 		{
@@ -75,11 +75,12 @@ const Navbar: FC = () => {
 		setShouldTriggerUserInfo(true)
 	}
 	useEffect(()=>{
-		userInfo = localStorage.getItem('userInfo') 
+		setUserInfo(localStorage.getItem('userInfo') || '')
 	},[])
 	useEffect(()=>{
 		if(shouldTriggerUserInfo) {
 			localStorage.setItem('userInfo', loginStatus)
+			setUserInfo(loginStatus)
 		}
 	}, [shouldTriggerUserInfo])
 	return (

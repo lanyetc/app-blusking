@@ -241,9 +241,9 @@ const AudienceRightContent = () => {
 }
 
 const MapPage: FC = () => {
-  let type;
+  const [type, setType] = useState('')
   useEffect(()=>{
-    type = localStorage.getItem('userInfo')
+    setType(localStorage.getItem('userInfo') || '')
   },[])
 
   return (
