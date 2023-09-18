@@ -27,10 +27,11 @@ interface IProps {
   ranking: string | number;
   comments: string | number;
   avatorUrl: string;
+  onDetail: any;
 }
 
 const Profile: FC<IProps> = (props: IProps) => {
-  const { name, id, tags, workName, workAmount, cheoutAmount, ranking, comments, avatorUrl } = props;
+  const { name, id, tags, workName, workAmount, cheoutAmount, ranking, comments, avatorUrl, onDetail } = props;
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSend, setIsSend] = useState(false);
   const onCommentClick = () => {
@@ -56,7 +57,7 @@ const Profile: FC<IProps> = (props: IProps) => {
       </div>
       <Row gutter={24} className={styles.blocks}>
         <Col span={12}>
-          <div className={classnames(styles.work, styles.block)} style={{ background: '#F0D20C' }}>
+          <div className={classnames(styles.work, styles.block)} style={{ background: '#F0D20C' }} onClick={onDetail}>
             <div className={styles.title}>{workName}</div>
             <div
               className={styles.text}

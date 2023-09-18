@@ -25,7 +25,7 @@ const NewsPage: FC = () => {
             {regulationData.info}
           </div>
         </div>
-        <Image src={regulationData.imgSrc} alt={regulationData.imgSrc} width={976} height={540} />
+        <Image src={regulationData.imgSrc} alt={regulationData.imgSrc} width={976} height={540} priority/>
         <div className={styles.paragraph}>{regulationData.brief}</div>
         {regulationData.sections.map((item, index)=>(
           <div className={styles.section} key={index}>

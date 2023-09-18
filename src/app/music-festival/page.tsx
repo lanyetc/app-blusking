@@ -35,10 +35,10 @@ const NewsPage: FC = () => {
             an event that promises to turn the city into a vibrant stage for artists
             from all walks of life.
           </div>
-          <Image src='/music-festival-1.png' alt="/music-festival-1.png" width={544} height={662}/>
+          <Image src='/music-festival-1.png' alt="/music-festival-1.png" width={544} height={662} priority/>
         </Col>
         <Col span={16} className={styles.rightContainer}>
-          <Image src='/music-festival-2.png' alt="/music-festival-2.png" width={392} height={810} />
+          <Image src='/music-festival-2.png' alt="/music-festival-2.png" width={392} height={810} priority/>
           <div className={styles.detail}>
             Welcome to the most exhilarating music festival of the year!
             Get ready to immerse yourself in a whirlwind of electrifying performances,
@@ -47,7 +47,7 @@ const NewsPage: FC = () => {
           <div className={styles.upload}>
             <span className={styles.text}>Want to join in the festival?</span>
             <Upload >
-              <Button >Upload your CV</Button>
+              <Button style={{borderRadius: 50}}>Upload your CV</Button>
             </Upload>
           </div>
         </Col>

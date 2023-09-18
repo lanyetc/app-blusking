@@ -11,12 +11,17 @@
 }
 
 .faqBlock {
-  background-image: url('/FAQ-1.png');
-  background-repeat: no-repeat;
   padding-block: 102px;
   border-radius: 16px;
   text-align: center;
   font-family: Eczar;
   font-size: 100px;
   font-weight: 700;
+  position: relative;
+}
+
+.BGImage {
+  position: absolute;
+  top: 0;
+  left: 0;
 }

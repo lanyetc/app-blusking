@@ -61,29 +61,34 @@ export const videoData = [
     date: '18/06/2023',
     title: 'Collaboration with street da...',
     marked: false,
+    videoSrc: 'https://www.youtube.com/embed/rIovDYwVC5w'
   },
   {
     imgSrc: '/video-2.png',
     date: '15/06/2023',
     title: 'Guitar solo play',
     marked: false,
+    videoSrc: 'https://www.youtube.com/embed/hnXJdMMZ3tU'
   },
   {
     imgSrc: '/video-3.png',
     date: '13/06/2023',
     title: 'Sing with me...',
     marked: false,
+    videoSrc: 'https://www.youtube.com/embed/0PyL-yWIFcs'
   },
   {
     imgSrc: '/video-4.png',
     date: '10/06/2023',
     title: 'Band collaboration',
     marked: false,
+    videoSrc: 'https://www.youtube.com/embed/rIovDYwVC5w'
   },
   {
     imgSrc: '/video-5.png',
     date: '07/06/2023',
     title: 'New songs first show',
     marked: false,
+    videoSrc: 'https://www.youtube.com/embed/rIovDYwVC5w'
   },
 ]

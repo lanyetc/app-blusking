@@ -31,7 +31,7 @@ const StoryPage: FC = () => {
           className={classnames(styles.container, { [styles.rowReverse]: item.position === 'right' })}
           style={{backgroundColor: item.bacground, color: item.color}}>
           <Col span={18} style={{textAlign: item.position}}>
-            <Image src={item.imgSrc} alt={item.imgSrc} width={item.width} height={item.height} />
+            <Image src={item.imgSrc} alt={item.imgSrc} width={item.width} height={item.height} priority/>
           </Col>
           <Col span={6}>
             <div className={classnames(styles.content, item.position === 'left' ? styles.left : styles.right)}>

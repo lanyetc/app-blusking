@@ -5,6 +5,8 @@ import styles from './index.module.css'
 import classnames from "classnames";
 import { Button, Card, Col, Collapse, CollapseProps, Input, Row } from "antd";
 import Icon from '@ant-design/icons';
+import Image from 'next/image'
+
 
 const text = `In order to apply for a licence you must submit the following documents: 
 application form relevant application fee photographic ID (including passport or driving licence) 
@@ -56,7 +58,14 @@ const FAQPage: FC = () => {
       <Row gutter={90} className={styles.container}>
         <Col span={12} className={styles.leftContainer}>
           <div className={styles.faqBlock}>
-            FAQ
+          <Image
+            src={'/FAQ-1.png'}
+            alt="/FAQ-1.png"
+            width={650}
+            height={390}
+            className={styles.BGImage}
+          />
+            <span style={{position: 'relative'}}>FAQ</span>
           </div>
         </Col>
         <Col span={12} className={styles.rightContainer}>

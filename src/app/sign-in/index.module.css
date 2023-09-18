@@ -32,6 +32,7 @@
 
 .formContent .input {
   color: #fff;
+  border-radius: 50px;
 }
 
 .formContent .input::placeholder {
@@ -52,6 +53,14 @@
 
 .submitBtn {
   text-align: center;
+}
+
+.submitBtn button {
+  border-radius: 50px;
+  font-size: 30px;
+  font-weight: 600;
+  padding-inline: 40px;
+  height: auto;
 }
 
 .signUpload {

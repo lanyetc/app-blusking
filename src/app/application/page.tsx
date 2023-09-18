@@ -19,7 +19,7 @@ const items = [
 
 const ApplicationPage: FC = () => {
   return (
-    <div className={classnames(styles.resourcePage)}>
+    <div className={classnames(styles.applicationPage)}>
       <div className={styles.innerContainer}>
       <header className={styles.header}>
         <div className={styles.title}>
@@ -48,6 +48,13 @@ const ApplicationPage: FC = () => {
         </div>
       </div>
       </div>
+      <Image
+        src={'/application-1.png'}
+        alt="/application-1.png" 
+        width={1016}
+        height={590}
+        priority
+      />
     </div>
   )
 }

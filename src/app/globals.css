@@ -5,7 +5,7 @@
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 
@@ -88,12 +88,7 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #000;
   font-family: Tenor Sans;
 }
 
@@ -218,6 +213,10 @@ input.ant-input {
   width: 362px !important;
 }
 
+.sign-in-select .ant-select-selector {
+  border-radius: 50px;
+}
+
 .sign-in-select .ant-select-selector,
 .sign-in-select .ant-select-selection-item {
   background-color: transparent !important;
@@ -244,6 +243,35 @@ input.ant-input {
 
 .sign-in-upload .ant-upload-drag-icon {
   font-size: 70px;
+}
+
+.schedule-timeline .ant-timeline-item-head-custom {
+  background-color: transparent;
+}
+
+.schedule-timeline .ant-timeline-item {
+  padding-bottom: 60px !important;
+}
+
+.schedule-timeline .ant-timeline-item .ant-timeline-item-tail {
+  border-color: #454545;
+}
+
+.map-segment.ant-segmented {
+  background-color: #3B3B3B;
+  color: #797979;
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.map-segment.ant-segmented .ant-segmented-item {
+  padding-block: 8px;
+}
+
+.map-segment.ant-segmented .ant-segmented-item-selected {
+  background-color: #ADADAD;
+  color: #fff;
 }
 
 @media (prefers-color-scheme: dark) {

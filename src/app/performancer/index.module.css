@@ -5,10 +5,19 @@
 .rightContainer {
   overflow: auto;
   padding: 36px;
+  position: relative;
+}
+
+.rightContainer > img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
 .songsContainer {
   display: flex;
+  position: relative;
 }
 
 .songBlock{
@@ -54,4 +63,50 @@
 
 .videoBlock .title .extra {
   text-align: right;
+}
+
+
+.mainBlock .date {
+  font-family: Eczar;
+  font-size: 40px;
+  font-weight: 600;
+  padding-bottom: 30px;
+}
+.mainBlock .articles {
+  display: flex;
+}
+
+.articles .item {
+  border-radius: 10px;
+  flex-shrink: 0;
+  margin-right: 70px;
+}
+
+.articles .item .header {
+  font-family: Eczar;
+  font-size: 25px;
+  font-weight: 600;
+  padding: 12px 24px;
+}
+
+.articles .item .title {
+  font-size: 30px;
+  text-align: center;
+  padding-top: 16px;
+  padding-bottom: 20px;
+}
+
+.articles .item .time {
+  padding: 8px 24px;
+  text-align: right;
+  font-weight: 600;
+}
+
+.backBar {
+  padding-bottom: 32px;
+  font-size: 36px;
+}
+
+.backBar > span {
+  cursor: pointer;
 }

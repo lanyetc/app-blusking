@@ -72,7 +72,7 @@ const Navbar: FC = () => {
 	]
 	const onLogin = () => {
 		setIsLoginModalOpen(false);
-		// localStorage.setItem('userInfo', 'true');
+		// localStorage.setItem('userInfo', loginStatus);
 	}
 	return (
 		<div className={classnames(style.navbar, { [style.transparent]: transparentBG })}>
@@ -108,39 +108,57 @@ const Navbar: FC = () => {
 				centered={true}
 			>
 				<div className={style.modalBody}>
-					<div style={{position: 'relative', zIndex: 10}}>
-					<div className={classnames("text-with-underline", style.modalTitle)}>
-						{loginStatus === 'login' ? 'Log In' : loginStatus === 'audience' ? 'Audience' : 'busker'}
+					<div style={{ position: 'relative', zIndex: 10 }}>
+						<div className={classnames("text-with-underline", style.modalTitle)}>
+							{loginStatus === 'login' ? 'Log In' : loginStatus === 'audience' ? 'Audience' : 'busker'}
+						</div>
+						{loginStatus === 'login' ? <div className={style.selectContainer}>
+							<Button
+								style={{ width: 248, height: 50, borderRadius: 20, marginBottom: 24, fontSize: 26 }}
+								ghost
+								onClick={() => setLoginStatus('busker')}
+							>
+								as busker
+							</Button>
+							<Button
+								style={{ width: 248, height: 50, borderRadius: 20, fontSize: 26 }}
+								ghost
+								onClick={() => setLoginStatus('audience')}
+							>
+								as audience
+							</Button>
+						</div> : <div className={style.loginContainer}>
+							<Input className={style.input} placeholder={loginStatus === 'busker' ? "ID No." : "Email"} />
+							<Input className={style.input} placeholder="Password" />
+							<Button className={style.loginBtn} onClick={onLogin}>Log in</Button>
+							{loginStatus === 'busker' ?
+								<span className={style.signUp}>
+									want to join us? 
+									<Link
+										href={'/sign-in'}
+										className={classnames(style.signUp, 'text-with-underline')}
+										onClick={() => setIsLoginModalOpen(false)}
+									>
+										Become busker
+									</Link>
+								</span>
+								: <Link
+									href={'/sign-in'}
+									className={style.signUp}
+									onClick={() => setIsLoginModalOpen(false)}
+								>
+									Sign up
+								</Link>}
+
+						</div>}
 					</div>
-					{loginStatus === 'login' ? <div className={style.selectContainer}>
-						<Button
-							style={{ width: 248, height: 50, borderRadius: 20, marginBottom: 24 }}
-							ghost
-							onClick={() => setLoginStatus('busker')}
-						>
-							as busker
-						</Button>
-						<Button
-							style={{ width: 248, height: 50, borderRadius: 20 }}
-							ghost
-							onClick={() => setLoginStatus('audience')}
-						>
-							as audience
-						</Button>
-					</div> : <div className={style.loginContainer}>
-						<Input className={style.input} placeholder="Email" />
-						<Input className={style.input} placeholder="Password" />
-						<Button className={style.loginBtn} onClick={onLogin}>Log in</Button>
-						<Link href={'/sign-in'} className={style.signUp} onClick={()=>setIsLoginModalOpen(false)} >Sign up</Link>
-					</div>}
-					</div>
-					<Image 
+					<Image
 						className={style.modalBGImg}
 						src={
-							loginStatus === 'login' ? '/login-bg-1.png' 
-							: loginStatus === 'audience' 
-							? '/login-bg-2.png'
-							: '/login-bg-3.png'
+							loginStatus === 'login' ? '/login-bg-1.png'
+								: loginStatus === 'audience'
+									? '/login-bg-2.png'
+									: '/login-bg-3.png'
 						}
 						alt="login-bg.png"
 						width={400}

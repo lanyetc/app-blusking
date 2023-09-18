@@ -3,11 +3,16 @@
   background-color: #F1EFDB;
   color: #000;
 }
+
 .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-top: 200px solid #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 200px solid #000;
+}
+
+.header .title {
+  margin-top: -70px;
 }
 
 .header .name {
@@ -45,7 +50,7 @@
   font-family: Eczar;
 }
 
-.content > img {
+.content>img {
   padding: 36px 0;
 }
 
@@ -55,6 +60,7 @@
   font-weight: 500;
   padding-bottom: 8px;
 }
+
 .section .paragraph {
   padding-bottom: 8px;
 }

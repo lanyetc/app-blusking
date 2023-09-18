@@ -101,17 +101,23 @@
   color: #fff;
   margin-bottom: 24px;
   border-radius: 50px;
+  font-size: 26px;
 }
 
 
 .loginContainer .input::placeholder {
   text-align: center;
   color: #fff;
+  font-size: 26px;
 }
 
 .loginContainer  .loginBtn {
   margin-top: 24px;
   margin-bottom: 12px;
+  font-size: 32px;
+  height: auto;
+  border-radius: 50px;
+  padding-inline: 40px;
 }
 
 .loginContainer  .signUp {

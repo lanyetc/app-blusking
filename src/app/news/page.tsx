@@ -31,7 +31,7 @@ const NewsPage: FC = () => {
   return (
     <div className={classnames(styles.historyPage)}>
       <header className={styles.header}>
-        <Image src='/news-1.png' alt='/news-1.png' width={810} height={566} />
+        <Image src='/news-1.png' alt='/news-1.png' width={810} height={566} priority/>
         <div className={styles.title}>
           <h1>News</h1>
           <div className={styles.description}>
@@ -52,7 +52,7 @@ const NewsPage: FC = () => {
               <Card
                 onClick={()=>handleOnCardClick(index)}
                 className={styles.card}
-                cover={<Image src={item.imgSrc} alt={item.imgSrc} width={412} height={256} />}
+                cover={<Image src={item.imgSrc} alt={item.imgSrc} width={412} height={256} priority/>}
               >
                 <Meta className={styles.cardMeta} title={item.content} description={item.date}></Meta>
               </Card>

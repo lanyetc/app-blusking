@@ -41,3 +41,9 @@
   font-weight: 700;
   padding-bottom: 20px;
 }
+
+.applicationPage > img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
