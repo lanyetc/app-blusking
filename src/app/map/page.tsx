@@ -1,6 +1,6 @@
 "use client"
 
-import { CSSProperties, Children, FC, useState } from "react"
+import { CSSProperties, Children, FC, useEffect, useState } from "react"
 import styles from './index.module.css'
 import classnames from "classnames";
 import { Button, Card, Col, Collapse, CollapseProps, DatePicker, Input, Row, Segmented, Timeline } from "antd";
@@ -241,7 +241,10 @@ const AudienceRightContent = () => {
 }
 
 const MapPage: FC = () => {
-  const type = window ? localStorage.getItem('userInfo') : false;
+  let type;
+  useEffect(()=>{
+    type = localStorage.getItem('userInfo')
+  },[])
 
   return (
     <div className={classnames(styles.FAQPage)}>

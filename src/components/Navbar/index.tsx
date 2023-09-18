@@ -1,6 +1,6 @@
 "use client"
 
-import { FC, useState } from "react"
+import { FC, useEffect, useState } from "react"
 import Image from 'next/image'
 import style from './index.module.css'
 import { usePathname } from "next/navigation";
@@ -40,8 +40,9 @@ const Menu = (props: any) => {
 const Navbar: FC = () => {
 	const [loginStatus, setLoginStatus] = useState('login')
 	const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+	const [shouldTriggerUserInfo, setShouldTriggerUserInfo] = useState(false)
 	const pathname = usePathname();
-	const userInfo = window ? localStorage.getItem('userInfo') : false;
+	let userInfo;
 	const transparentBG = Transparent_BG_Pages.includes(pathname);
 	const navs = [
 		{
@@ -71,8 +72,16 @@ const Navbar: FC = () => {
 	]
 	const onLogin = () => {
 		setIsLoginModalOpen(false);
-		window && localStorage.setItem('userInfo', loginStatus);
+		setShouldTriggerUserInfo(true)
 	}
+	useEffect(()=>{
+		userInfo = localStorage.getItem('userInfo') 
+	},[])
+	useEffect(()=>{
+		if(shouldTriggerUserInfo) {
+			localStorage.setItem('userInfo', loginStatus)
+		}
+	}, [shouldTriggerUserInfo])
 	return (
 		<div className={classnames(style.navbar, { [style.transparent]: transparentBG })}>
 			<span className="icon">
