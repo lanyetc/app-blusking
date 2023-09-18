@@ -87,6 +87,9 @@ const Navbar: FC = () => {
 			setLoginStatus('login')
 		}
 	}, [shouldTriggerUserInfo])
+	if(userInfo !== 'busker') {
+		navs?.[2].children?.splice(1,1)
+	}
 	return (
 		<div className={classnames(style.navbar, { [style.transparent]: transparentBG })}>
 			<span className="icon">
@@ -113,7 +116,7 @@ const Navbar: FC = () => {
 						}]}
 					}>
 						<Image 
-							src={'/user-avator.svg'} 
+							src={userInfo === 'busker' ? 'user-avator-2.svg' : '/user-avator.svg'} 
 							alt={'/user-avator.svg'} 
 							width={32} 
 							height={32}

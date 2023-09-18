@@ -262,7 +262,7 @@ const MapPage: FC = () => {
           </div>
         </Col>
         <Col span={8} className={styles.rightContainer}>
-          {type === 'busker' ? <BuskerRightContent /> : <AudienceRightContent />}
+          {type !== 'busker' ? <BuskerRightContent /> : <AudienceRightContent />}
         </Col>
       </Row>
     </div>
