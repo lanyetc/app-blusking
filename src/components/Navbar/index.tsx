@@ -116,7 +116,7 @@ const Navbar: FC = () => {
 						}]}
 					}>
 						<Image 
-							src={userInfo === 'busker' ? 'user-avator-2.svg' : '/user-avator.svg'} 
+							src={userInfo === 'busker' ? '/user-avator-2.svg' : '/user-avator.svg'} 
 							alt={'/user-avator.svg'} 
 							width={32} 
 							height={32}
