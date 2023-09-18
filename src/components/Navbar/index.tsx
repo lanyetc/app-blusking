@@ -6,7 +6,7 @@ import style from './index.module.css'
 import { usePathname } from "next/navigation";
 import classnames from "classnames";
 import Link from "next/link";
-import { Button, Input, Modal } from "antd";
+import { Button, Dropdown, Input, Modal } from "antd";
 
 const Transparent_BG_Pages = [
 	'/music-festival',
@@ -81,6 +81,10 @@ const Navbar: FC = () => {
 		if(shouldTriggerUserInfo) {
 			localStorage.setItem('userInfo', loginStatus)
 			setUserInfo(loginStatus)
+		} else {
+			localStorage.setItem('userInfo', '')
+			setUserInfo('')
+			setLoginStatus('login')
 		}
 	}, [shouldTriggerUserInfo])
 	return (
@@ -102,9 +106,19 @@ const Navbar: FC = () => {
 			</div>
 			<div className={style.userLoginItem}>
 				{userInfo ? (
-					<div className={style.avator}>
-						<Image src={'/user-avator.svg'} alt={'/user-avator.svg'} width={32} height={32} />
-					</div>
+					<Dropdown className={style.avator} menu={
+						{items: [{
+							key: 'logout',
+							label: <span onClick={()=>setShouldTriggerUserInfo(false)}>Log out</span>
+						}]}
+					}>
+						<Image 
+							src={'/user-avator.svg'} 
+							alt={'/user-avator.svg'} 
+							width={32} 
+							height={32}
+						/>
+					</Dropdown>
 				) : (
 					<Button onClick={() => setIsLoginModalOpen(true)}>Log In</Button>
 				)}

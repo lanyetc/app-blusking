@@ -71,6 +71,10 @@
   margin-left: 60px;
 }
 
+.userLoginItem .avator {
+  cursor: pointer;
+}
+
 .modalBody {
   padding-inline: 54px;
   position: relative;

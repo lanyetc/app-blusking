@@ -73,7 +73,7 @@ const LivePage: FC = () => {
             <div className={styles.materialContent}>
               {materials.map((item, index) => (
                 <div className={styles.materialItem} key={index}>
-                  <span className={styles.text}>{index}. </span>
+                  <span className={styles.text}>{index+1}. </span>
                   <span className={classnames(styles.text, styles.rightText, 'text-with-underline')}>{item}</span>
                 </div>
               ))}
@@ -84,12 +84,11 @@ const LivePage: FC = () => {
           <div className={styles.liveTitle}>
             Session 1 - How to play chord as a beginner?
           </div>
-          <Image
-            src={'/live-3.png'}
-            alt="/live-3.png"
-            width={1000}
-            height={768}
-          />
+          <div style={{marginBlockStart: 74}}>
+          <iframe style={{marginBlockStart: 24}} width="100%" height="500"
+          src={'https://www.youtube.com/embed/cUxRhesT8gY'}>
+        </iframe>
+          </div>
           <div className={classnames('sendInput', styles.sendInput)}>
             <Input
               size="large"
