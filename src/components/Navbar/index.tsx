@@ -41,8 +41,7 @@ const Navbar: FC = () => {
 	const [loginStatus, setLoginStatus] = useState('login')
 	const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 	const pathname = usePathname();
-	// const userInfo = localStorage.getItem('userInfo');
-	const userInfo = false;
+	const userInfo = localStorage.getItem('userInfo');
 	const transparentBG = Transparent_BG_Pages.includes(pathname);
 	const navs = [
 		{
@@ -72,7 +71,7 @@ const Navbar: FC = () => {
 	]
 	const onLogin = () => {
 		setIsLoginModalOpen(false);
-		// localStorage.setItem('userInfo', loginStatus);
+		localStorage.setItem('userInfo', loginStatus);
 	}
 	return (
 		<div className={classnames(style.navbar, { [style.transparent]: transparentBG })}>
@@ -94,7 +93,7 @@ const Navbar: FC = () => {
 			<div className={style.userLoginItem}>
 				{userInfo ? (
 					<div className={style.avator}>
-						<Image src={'/user-avator.svg'} alt={'/user-avator.svg'} width={46} height={46} />
+						<Image src={'/user-avator.svg'} alt={'/user-avator.svg'} width={32} height={32} />
 					</div>
 				) : (
 					<Button onClick={() => setIsLoginModalOpen(true)}>Log In</Button>

@@ -241,7 +241,7 @@ const AudienceRightContent = () => {
 }
 
 const MapPage: FC = () => {
-  const type = 'busking';
+  const type = localStorage.getItem('userInfo');
 
   return (
     <div className={classnames(styles.FAQPage)}>
@@ -259,7 +259,7 @@ const MapPage: FC = () => {
           </div>
         </Col>
         <Col span={8} className={styles.rightContainer}>
-          {type === 'busking' ? <BuskerRightContent /> : <AudienceRightContent />}
+          {type === 'busker' ? <BuskerRightContent /> : <AudienceRightContent />}
         </Col>
       </Row>
     </div>
