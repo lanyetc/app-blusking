@@ -6,7 +6,7 @@ import styles from './index.module.css'
 import classnames from "classnames";
 import { Button, Card, Col, Modal, Row, Tag, Upload } from "antd";
 import Profile from "@/components/Profile";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { songsData, videoData } from "./data";
 import { PauseOutlined, HeartFilled, ArrowLeftOutlined } from "@ant-design/icons"
 
@@ -127,7 +127,8 @@ const Videos = () => {
 }
 
 const Main = () => {
-  return <div className={styles.mainBlock}>
+  return <>
+   <div className={styles.mainBlock}>
     <div className={classnames(styles.date, 'text-with-underline')}>June</div>
     <div className={styles.articles}>
       <div className={styles.item} style={{ backgroundColor: '#70CCC4' }}>
@@ -169,6 +170,50 @@ const Main = () => {
       </div>
     </div>
   </div>
+  <div className={styles.mainBlock} style={{marginTop: 70}}>
+    <div className={classnames(styles.date, 'text-with-underline')}>July</div>
+    <div className={styles.articles}>
+      <div className={styles.item} style={{ backgroundColor: '#EB3D63' }}>
+        <div className={styles.header}>Fri. 16</div>
+        <div className={styles.title} style={{ color: '#6B051C' }}>Concert</div>
+        <div className={styles.time}>20:00-23:00</div>
+        <Image
+          src='/singer-18.png'
+          alt="/singer-18.png"
+          width={336}
+          height={208}
+          priority
+        />
+      </div>
+      <div className={styles.item} style={{ backgroundColor: '#F1EFDB' }}>
+        <div className={styles.header} style={{ backgroundColor: '#A5DA74' }}>Sun. 25</div>
+        <div className={styles.title} style={{ paddingBlock: 90, paddingInline: 20, color: '#06413C' }}>Music Collaboration</div>
+        <div style={{ textAlign: 'right' }}>
+          <Image
+            src='/singer-16.png'
+            alt="/singer-16.png"
+            width={206}
+            height={54}
+            priority
+          />
+        </div>
+      </div>
+      <div className={styles.item} style={{ backgroundColor: '#F1EFDB' }}>
+        <div className={styles.header} style={{ backgroundColor: '#F0D20C' }}>Wed. 27</div>
+        <div className={styles.title} style={{ paddingBlock: 90, paddingInline: 64, color: '#06413C' }}>Music Festival</div>
+        <div style={{ textAlign: 'right' }}>
+          <Image
+            src='/singer-16.png'
+            alt="/singer-16.png"
+            width={206}
+            height={54}
+            priority
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  </>
 }
 
 const SingerPage: FC = () => {
@@ -176,8 +221,21 @@ const SingerPage: FC = () => {
   const type = searchParams.get('type')
   const profileInfo = type === 'singer' ? singerData : magicianData;
   const [isDetail, setIsDetail] = useState(false);
+  const router = useRouter();
   return (
     <div className={classnames(styles.SingerPage)}>
+      <div 
+        className={styles.backBar}
+        style={{
+          position: 'absolute',
+          left: 20,
+          paddingBlockStart: 10,
+          fontSize: 24,
+          color: '#000'
+        }}
+      >
+        <ArrowLeftOutlined onClick={() => router.push('/celebrities')} />
+      </div>
       <Profile
         {...profileInfo}
         onDetail={() => setIsDetail(true)}

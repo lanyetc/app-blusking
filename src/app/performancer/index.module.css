@@ -87,6 +87,7 @@
   font-size: 25px;
   font-weight: 600;
   padding: 12px 24px;
+  border-radius: 10px 10px 0 0;
 }
 
 .articles .item .title {

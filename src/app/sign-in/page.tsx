@@ -169,6 +169,13 @@ const LoginPage: FC = () => {
           </div>
         </div>}
       </Form>
+      <Image
+        className={styles.backgroundImg}
+        src={'/login-bg.png'}
+        alt={'/login-bg.png'}
+        width={1826}
+        height={748}
+      />
     </div>
   )
 }

@@ -2,7 +2,6 @@
   color: #fff;
   padding: 64px;
   display: flex;
-  overflow: auto;
 }
 .LoginPage .block {
   padding-inline: 30px;
@@ -82,4 +81,15 @@
   padding-block: 4px;
   color: #363636;
   background: #fff;
+}
+
+.LoginPage {
+  position: relative;
+  overflow: auto;
+}
+
+.backgroundImg {
+  position: absolute;
+  left: 400px;
+  top: 0px;
 }
