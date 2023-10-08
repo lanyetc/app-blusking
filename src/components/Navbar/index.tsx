@@ -26,7 +26,6 @@ const LinkItem = (props: any) => {
 const Menu = (props: any) => {
 	const { menus } = props;
 	const pathname = usePathname();
-	// const activeItem = menus.find((item:any) => item.href === pathname) || menus?.[0];
 	return (
 		<div className={style.menu}>
 			<LinkItem label={menus[0].label} href={menus[0].href} />
